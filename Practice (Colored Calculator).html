@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--menggunakan tambahan CSS (Cascading Style Sheets) untuk mempercantik tata letak-->
+<!--file stylesheet lebih baik secara terpisah-->
+<!--cara menggunakan css dalam html (inline, internal, external file)-->
+<html>
+    <head>
+        <style>
+            .grid-container {
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px;
+            grid-gap: 5px 
+            }
+            input{
+                grid-column: 1 / span 4;
+            }
+            button {
+                width: 100%;
+                background-color:rgb(221, 206, 206);
+                color: rgb(88, 16, 16);
+                border:none;
+            }
+            .red {
+                background-color: rgb(88, 16, 16);
+                color: white;
+            }
+            .peach {
+                grid-column: 1 / span 2;
+                background-color: peachpuff;
+                color:rgb(88, 16, 16);
+            }
+            .operator {
+                background-color: rgb(187, 93, 93);
+                color: white;
+            }
+        </style>
+        <!--style u/ memberi border tabel, th, td-->
+        <!--button width 100% agar ukuran sama setiap tombolnya-->
+    </head>
+    <body>
+        <p>Menggunakan Class Button</p>
+        <div class="grid-container">
+            <input type="text" name="display">
+            <button class="peach">ON/AC</button>
+            <button class="red">C</button>
+            <button class="operator">*</button>
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="operator">/</button>
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="operator">+</button>
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="operator">-</button>
+            <button class="operator">+/-</button>
+            <button class="button">0</button>
+            <button class="operator">.</button>
+            <button class="operator">=</button>
+        </div>
+        <br>
+        <p>Menggunakan Table</p>
+        <table>
+        <tr>
+            <th colspan="4"><input type="text" name="display"></th>
+        </tr>
+        <tr> 
+            <td colspan="2">
+            <!--colspan="2" u/ merge sampai 2 kolom-->
+                <button class="red">ON/AC</button>
+                <!--button u/ fungsi tombol-->
+                <!--class untuk reused variabel nantinya-->
+            </td>
+            <td>
+                <button class="peach">C</button>
+            </td>
+            <td>
+                <button class="operator">*</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>7</button>
+            </td>
+            <td>
+                <button>8</button>
+            </td>
+            <td>
+                <button>9</button>
+            </td>
+            <td>
+                <button class="operator">/</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>4</button>
+            </td>
+            <td>
+                <button>5</button>
+            </td>
+            <td>
+                <button>6</button>
+            </td>
+            <td>
+                <button class="operator">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>1</button>
+            </td>
+            <td>
+                <button>2</button>
+            </td>
+            <td>
+                <button>3</button>
+            </td>
+            <td>
+                <button class="operator">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>+/-</button>
+            </td>
+            <td>
+                <button>0</button>
+            </td>
+            <td>
+                <button>.</button>
+            </td>
+            <td>
+                <button class="operator">=</button>
+            </td>
+        </tr>
+       </table>
+       <!--freecodecamp.com u/ belajar coding-->
+    </body>
+</html>
